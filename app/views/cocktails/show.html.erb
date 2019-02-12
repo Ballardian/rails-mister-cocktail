@@ -1,18 +1,26 @@
-<div class="container text-center">
-  <h2><%= @cocktail.name %></h2>
-  <div class="btn btn-link"><%= link_to "Edit this cocktail", edit_cocktail_path %></div>
-  <div class="btn btn-link"><%= link_to "Delete", cocktail_path(@cocktail),
-        method: :delete,
-        data: { confirm: "Are you sure?" } %></div>
-  <div class="btn btn-link"><%= link_to "Back to list", cocktails_path %></div>
-  <div class="btn btn-link"><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail.id) %></div>
-
-
-  <h2>Ingredients and Doses</h2>
-  <% @cocktail.doses.each do |dose|  %>
-    <div class="card">
-        <h3><%= "#{dose.ingredient.name} - #{dose.description}" %></h3>
-    </div>
-  <%end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>');">
 
 </div>
+    <h1><%= @cocktail.name %></h1>
+    <div class="card-product text-center">
+      <img src="<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>">
+        <h2>Ingredients and Doses</h2>
+        <div class="card-product-infos text-center">
+          <% @cocktail.doses.each do |dose|  %>
+              <p><%= "#{dose.ingredient.name} - #{dose.description}" %></p>
+          <%end %>
+        </div>
+    </div>
+
+  <div class="container text-center">
+
+    <div class="btn btn-link"><%= link_to "Edit this cocktail", edit_cocktail_path %></div>
+    <div class="btn btn-link"><%= link_to "Delete", cocktail_path(@cocktail),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %></div>
+    <div class="btn btn-link"><%= link_to "Back to list", cocktails_path %></div>
+    <div class="btn btn-link"><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail.id) %></div>
+
+  </div>
+
+

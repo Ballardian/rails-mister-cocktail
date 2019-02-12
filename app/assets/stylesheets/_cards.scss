@@ -57,14 +57,64 @@
 
 h1 {
   text-align: center;
-  color: white;
+  color: black;
+  font-family: 'Abril Fatface', cursive;
 }
 
 h2, p {
-  color: #A3BFD2;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
 }
 
-a {
+.card-category > a {
   text-align: center;
   color: white;
+  font-family: 'Abril Fatface', cursive;
 }
+
+#link {
+  text-align: center;
+  color: black !important;
+}
+
+
+.card-product {
+  overflow: hidden;
+  height: 400px;
+  width: 600px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-product img {
+  height: 80%;
+  width: 120px;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+

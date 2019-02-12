@@ -10,8 +10,8 @@ $body-bg:                 $light-gray;
 $font-size-base: 18px;
 
 // Colors
-$gray-base:       $gray;
-$brand-primary:   $blue;
+$brand-base:       $light-gray;
+$brand-primary:   $gray;
 $brand-success:   $green;
 $brand-info:      $yellow;
 $brand-danger:    $red;
@@ -23,3 +23,11 @@ $border-radius-large: 2px;
 $border-radius-small: 2px;
 
 // Override other variables below!
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: none !default;
+
+$btn-primary-color:              #fff !default;
